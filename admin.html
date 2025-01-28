@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examination on B.Tech Courses</title>
+    <style>
+        /* Styles remain unchanged */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #c9e4f5, #e3d4f5);
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 15px 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            width: 100%;
+        }
+
+        .navbar .logo img {
+            height: 50px;
+            object-fit: contain;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar ul li {
+            margin: 0 20px;
+        }
+
+        .navbar ul li a {
+            color: #4e4e4e;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .navbar ul li a:hover {
+            color: #ff9800;
+        }
+
+        .main-content {
+            background-color: #ffffff;
+            padding: 40px 30px;
+            width: 420px;
+            margin: 0 auto;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .main-content h2 {
+            font-size: 26px;
+            color: #0066cc;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .main-content form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .main-content form label {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .main-content form input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+            transition: border 0.3s ease;
+        }
+
+        .main-content form input:focus {
+            border-color: #ff9800;
+            outline: none;
+        }
+
+        .main-content form button {
+            padding: 12px 25px;
+            background-color: #0066cc;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .main-content form button:hover {
+            background-color: #ff9800;
+        }
+
+        footer {
+            background-color: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            font-size: 14px;
+            color: #555;
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: #0066cc;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #ff9800;
+        }
+
+        footer p:last-child {
+            font-size: 12px;
+            color: #888;
+        }
+
+        @media screen and (max-width: 768px) {
+            .navbar ul {
+                display: block;
+                text-align: center;
+            }
+
+            .navbar ul li {
+                margin: 10px 0;
+            }
+
+            .main-content {
+                margin-top: 30px;
+                padding: 20px 15px;
+                width: 90%;
+            }
+        }
+    </style>
+    <script>
+        // JavaScript to validate the form
+        function validateForm(event) {
+            var passcode = document.getElementById('passcode').value;
+
+            if (passcode !== 'PVGS@123') {
+                alert('Invalid passcode. Please try again.');
+                event.preventDefault(); // Prevents the form from being submitted
+                return false;
+            } else {
+                // Passcode is correct, allow form submission
+                alert('Passcode accepted. Redirecting...');
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="logo"><img src="pics/a1.png" alt="Logo"></a>
+        <ul>
+            <li><a href="index.html">About</a></li>
+            <li><a href="signin.html">Sign In</a></li>
+            <li><a href="admin.html">Admin</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="#results">Results</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-content">
+        <h2>Enter Passcode to Proceed</h2>
+        <form action="adminmodify.html" method="GET" onsubmit="validateForm(event)">
+            <label for="passcode">Passcode:</label>
+            <input type="password" id="passcode" name="passcode" placeholder="Enter your passcode" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>Contact us: <a href="mailto:pvgs@example.com">pvgs@example.com</a> | Phone: +123 456 7890</p>
+        <p>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Help Center</a>
+        </p>
+        <p>&copy; 2025 Online Examination System. All rights reserved.</p>
+    </footer>
+</body>
+</html>

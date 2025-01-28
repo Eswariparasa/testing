@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PVGS-Sign Up</title>
+    <style>
+        body {
+            background-image: url(pics/123.png);
+            background-size: fit;
+            background-repeat: repeat;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 10px 20px;
+            border-bottom: 0.3px solid #ccc;
+        }
+
+        .navbar .logo img {
+            height: 60px;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar ul li {
+            margin: 0 15px;
+        }
+
+        .navbar ul li a {
+            color: #601637;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            color: #ff9800;
+        }
+
+        .signup-container {
+            width: 35%;
+            margin: 100px auto;
+            padding: 60px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+        }
+
+        .signup-container h2 {
+            text-align: center;
+            color: #601637;
+        }
+
+        .signup-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .signup-container label {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .signup-container input {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .signup-container button {
+            padding: 10px;
+            background-color: #601637;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .signup-container button:hover {
+            background-color: #ff9800;
+        }
+
+        .signup-container p {
+            text-align: center;
+            margin-top: 10px;
+            color: #555;
+        }
+
+        .signup-container a {
+            color: #601637;
+            text-decoration: none;
+        }
+
+        .signup-container a:hover {
+            color: #ff9800;
+        }
+
+        footer {
+            background-color: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #ccc;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #555;
+        }
+
+        footer a {
+            color: #601637;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #ff9800;
+        }
+    </style>
+
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="logo"><img src="pics/a1.png" alt="Logo"></a>
+        <ul>
+            <li><a href="index.html">About</a></li>
+            <li><a href="signin.html">Sign In</a></li>
+            <li><a href="admin.html">Admin</a></li>
+            <li><a href="courses.html">courses</a></li>
+            <li><a href="#results">Results</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="signup-container">
+        <h2>Sign Up</h2>
+        <form action="signin.html" method="POST" onsubmit="return validateForm()">
+
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="signin.html">Sign In</a></p>
+    </div>
+
+    <footer>
+        <p>Contact us: <a href="mailto:pvgs@example.com">pvgs@example.com</a> | Phone: +123 456 7890</p>
+        <p>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Help Center</a>
+        </p>
+        <p>&copy; 2025 Online Examination System. All rights reserved.</p>
+    </footer>
+</body>
+</html>

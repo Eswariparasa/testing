@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examination on B.Tech courses</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 10px 20px;
+            border-bottom: 0.3px solid #ccc;
+        }
+
+        .navbar .logo img {
+            height: 60px;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar ul li {
+            margin: 0 15px;
+        }
+
+        .navbar ul li a {
+            color: #601637;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            color: #ff9800;
+        }
+
+        .course-section {
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        .course {
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .course-name {
+            font-size: 18px;
+        }
+
+        .course-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .course-actions a{
+            padding: 8px 15px;
+            border: none;
+            background-color: #b44476;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .course-actions button {
+            padding: 8px 15px;
+            border: none;
+            background-color: #215c2b;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .course-actions button:hover{
+            background-color: rgb(124, 163, 67);
+        }
+        .course-actions a:hover
+         {
+            background-color: #ff9800;
+        }
+
+        footer {
+            background-color: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #ccc;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #555;
+        }
+
+        footer a {
+            color: #601637;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #ff9800;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="logo"><img src="pics/a1.png" alt="Logo"></a>
+        <ul>
+            <li><a href="index.html">About</a></li>
+            <li><a href="signin.html">Sign In</a></li>
+            <li><a href="admin.html">Admin</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="#results">Results</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="course-section">
+        <div class="course">
+            <span class="course-name">HTML</span>
+            <div class="course-actions">
+                <a href="htmllearn.html">Learn Course</a>
+                <button>Attempt Test</button>
+            </div>
+        </div>
+        <div class="course">
+            <span class="course-name">CSS</span>
+            <div class="course-actions">
+                <a href="csslearn.html">Learn Course</a>
+                <button>Attempt Test</button>
+            </div>
+        </div>
+        <div class="course">
+            <span class="course-name">Java</span>
+            <div class="course-actions">
+                <a href="javalearn.html">Learn Course</a>
+                <button>Attempt Test</button>
+            </div>
+        </div>
+        <div class="course">
+            <span class="course-name">JavaScript</span>
+            <div class="course-actions">
+                <a href="jslearn.html">Learn Course</a>
+                <button>Attempt Test</button>
+            </div>
+        </div>
+        <div class="course">
+            <span class="course-name">Python</span>
+            <div class="course-actions">
+                <a href="pythonlearn.html">Learn Course</a>
+                <button>Attempt Test</button>
+            </div>
+        </div>
+        <div class="course">
+            <span class="course-name">C</span>
+            <div class="course-actions">
+                <a href="clearn.html">Learn Course</a>
+                <button>Attempt Test</button>
+            </div>
+        </div>
+        <div class="course">
+            <span class="course-name">C++</span>
+            <div class="course-actions">
+                <a href="cpplearn.html">Learn Course</a>
+                <button>Attempt Test</button>
+            </div>
+        </div>
+        <div class="course">
+            <span class="course-name">MySQL</span>
+            <div class="course-actions">
+                <a href="mysqllearn.html">Learn Course</a>
+                <button>Attempt Test</button>
+            </div>
+        </div>
+        <div class="course">
+            <span class="course-name">PHP</span>
+            <div class="course-actions">
+                <a href="phplearn.html">Learn Course</a>
+                <button>Attempt Test</button>
+            </div>
+        </div>
+        <div class="course">
+            <span class="course-name">Flask</span>
+            <div class="course-actions">
+                <a href="flasklearn.html">Learn Course</a>
+                <button>Attempt Test</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Contact us: <a href="mailto:pvgs@example.com">pvgs@example.com</a> | Phone: +123 456 7890</p>
+        <p>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Help Center</a>
+        </p>
+        <p>&copy; 2025 Online Examination System. All rights reserved.</p>
+    </footer>
+</body>
+</html>

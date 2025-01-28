@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Animated Grid</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f4f4f9;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 10px 20px;
+            border-bottom: 0.3px solid #ccc;
+        }
+
+        .navbar .logo img {
+            height: 60px;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar ul li {
+            margin: 0 15px;
+        }
+
+        .navbar ul li a {
+            color: #601637;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            color: #ff9800;
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        .grid-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            transform: scale(0.8);
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        .grid-item:nth-child(1) { animation-delay: 0.1s; }
+        .grid-item:nth-child(2) { animation-delay: 0.2s; }
+        .grid-item:nth-child(3) { animation-delay: 0.3s; }
+        .grid-item:nth-child(4) { animation-delay: 0.4s; }
+        .grid-item:nth-child(5) { animation-delay: 0.5s; }
+        .grid-item:nth-child(6) { animation-delay: 0.6s; }
+        .grid-item:nth-child(7) { animation-delay: 0.7s; }
+        .grid-item:nth-child(8) { animation-delay: 0.8s; }
+        .grid-item:nth-child(9) { animation-delay: 0.9s; }
+        .grid-item:nth-child(10) { animation-delay: 1s; }
+
+        .grid-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+        }
+
+        @keyframes fadeIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #ccc;
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #555;
+        }
+
+        footer a {
+            color: #601637;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #ff9800;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#" class="logo"><img src="pics/a1.png" alt="Logo"></a>
+        <ul>
+            <li><a href="index.html">About</a></li>
+            <li><a href="signin.html">Sign In</a></li>
+            <li><a href="admin.html">Admin</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="#results">Results</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="grid-container">
+            <a href="htmllearn.html" class="grid-item"><img src="pics/html.jpg" alt="HTML"></a>
+            <a href="csslearn.html" class="grid-item"><img src="pics/css.jpg" alt="CSS"></a>
+            <a href="javalearn.html" class="grid-item"><img src="pics/java.jpg" alt="Java"></a>
+            <a href="jslearn.html" class="grid-item"><img src="pics/js.jpg" alt="JS"></a>
+            <a href="pythonlearn.html" class="grid-item"><img src="pics/python.jpg" alt="PYTHON"></a>
+            <a href="clearn.html" class="grid-item"><img src="pics/c.jpg" alt="C"></a>
+            <a href="cpplearn.html" class="grid-item"><img src="pics/c++.jpg" alt="C++"></a>
+            <a href="mysqllearn.html" class="grid-item"><img src="pics/mysql.jpg" alt="MY SQL"></a>
+            <a href="phplearn.html" class="grid-item"><img src="pics/php.jpg" alt="PHP"></a>
+            <a href="flasklearn.html" class="grid-item"><img src="pics/flask.jpg" alt="FLASK"></a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Contact us: <a href="mailto:pvgs@example.com">pvgs@example.com</a> | Phone: +123 456 7890</p>
+        <p>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Help Center</a>
+        </p>
+        <p>&copy; 2025 Online Examination System. All rights reserved.</p>
+    </footer>
+</body>
+</html>

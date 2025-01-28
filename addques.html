@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enter Exam Details</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .form-container {
+      width: 450px;
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-container h1 {
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group input, .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    .form-group textarea {
+      resize: none;
+      height: 60px;
+    }
+
+    .form-group input:focus, .form-group textarea:focus {
+      border-color: #007bff;
+    }
+
+    .form-group label {
+      font-size: 14px;
+      display: block;
+      margin-bottom: 5px;
+      color: #555;
+    }
+
+    .form-group button {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .form-group button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h1>Enter Exam Details</h1>
+    <form id="examForm" action="submit_exam.php" method="POST">
+      <div class="form-group">
+        <input type="text" id="examTitle" name="examTitle" placeholder="Enter Exam Title" required>
+      </div>
+      <div class="form-group">
+        <input type="number" id="totalQuestions" name="totalQuestions" placeholder="Enter total number of questions" required>
+      </div>
+      <div class="form-group">
+        <input type="number" id="marksRightAnswer" name="marksRightAnswer" placeholder="Enter marks on right answer" required>
+      </div>
+      <div class="form-group">
+        <input type="number" id="minusMarksWrong" name="minusMarksWrong" placeholder="Enter minus marks on wrong answer without sign" required>
+      </div>
+      <div class="form-group">
+        <input type="number" id="timeLimit" name="timeLimit" placeholder="Enter time limit for test in minute" required>
+      </div>
+      <div class="form-group">
+        <input type="text" id="tag" name="tag" placeholder="Enter #tag which is used for searching" required>
+      </div>
+      <div class="form-group">
+        <textarea id="description" name="description" placeholder="Write description here..." required></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('examForm').addEventListener('submit', function (e) {
+      const title = document.getElementById('examTitle').value.trim();
+      const questions = document.getElementById('totalQuestions').value;
+      const timeLimit = document.getElementById('timeLimit').value;
+
+      if (title === '' || questions <= 0 || timeLimit <= 0) {
+        e.preventDefault();
+        alert('Please fill out all fields correctly!');
+      }
+    });
+  </script>
+</body>
+</html>
